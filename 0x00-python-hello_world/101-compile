@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 -m compileall -b "$PYFILE"
+export PYFILE=my_main.py && python -m py_compile "$PYFILE" && echo "Compilation successful. Compiled file: ${PYFILE%.*}.pyc" || echo "Error: Compilation failed."
+
